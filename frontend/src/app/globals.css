@@ -46,7 +46,8 @@
   --color-neon-cyan: #00ffff;
   --color-neon-blue: #4169ff;
   --color-neon-green: #00ff9d;
-
+--color-buy: #00c853;  /* Vivid Green */
+  --color-sell: #00c853; /* Matching Green as requested */
   /* Status Colors */
   --color-success: #00c853;
   --color-danger: #ef4444;
