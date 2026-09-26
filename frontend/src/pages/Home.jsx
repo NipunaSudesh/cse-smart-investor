@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { stocksApi } from '../services/api';
-import StockCard from '../components/StockCard';
+import StockCard from '../components/ui/StockCard';
 
 export default function Home() {
   const [query, setQuery] = useState('');
