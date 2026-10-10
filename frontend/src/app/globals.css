@@ -2,21 +2,22 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* =========================================================
-   TAILWIND V4 THEME EXTENSIONS
-========================================================= */
 @theme {
   --color-primary: var(--color-primary);
   --color-primary-light: var(--color-primary-light);
   --color-accent: var(--color-accent);
-  
-  --color-neon-cyan: var(--color-neon-cyan);
-  --color-neon-blue: var(--color-neon-blue);
-  --color-neon-green: var(--color-neon-green);
 
-  --color-success: var(--color-success);
-  --color-danger: var(--color-danger);
-  --color-warning: var(--color-warning);
+  --color-light-cyan: var(--color-light-cyan);
+  --color-light-blue: var(--color-light-blue);
+  --color-light-green: var(--color-light-green);
+
+  --color-dark-background: var(--color-dark-background);
+  --color-dark-surface: var(--color-dark-surface);
+  --color-dark-border: var(--color-dark-border);
+  --color-dark-card: var(--color-dark-card);
+
+  --color-dark-text-main: var(--color-dark-text);
+  --color-dark-text-muted: var(--color-dark-text-muted);
 
   --color-background: var(--color-background);
   --color-surface: var(--color-surface);
@@ -24,16 +25,15 @@
   --color-text-main: var(--color-text);
   --color-text-muted: var(--color-text-muted);
 
-  --color-dark-background: var(--color-dark-background);
-  --color-dark-surface: var(--color-dark-surface);
-  --color-dark-border: var(--color-dark-border);
-  --color-dark-text-main: var(--color-dark-text);
-  --color-dark-text-muted: var(--color-dark-text-muted);
+  --color-buy: var(--color-buy);
+  --color-sell: var(--color-sell);
+  --color-success: var(--color-success);
+  --color-danger: var(--color-danger);
+  --color-warning: var(--color-warning);
+--color-text-green-light: var(--color-text-green-light);
+  --color-text-green-dark: var(  --color-text-green-dark);
 }
 
-/* =========================================================
-   STOCK TRADE - GLOBAL DESIGN SYSTEM
-========================================================= */
 :root {
   /* Primary Brand */
   --color-primary: #0000e6;
@@ -43,11 +43,11 @@
   --color-accent: #00e6b8;
 
   /* Brilliant / Neon Colors */
-  --color-neon-cyan: #00ffff;
-  --color-neon-blue: #4169ff;
-  --color-neon-green: #00ff9d;
---color-buy: #00c853;  /* Vivid Green */
-  --color-sell: #00c853; /* Matching Green as requested */
+  --color-light-cyan: #00ffff;
+  --color-light-blue: #4169ff;
+  --color-light-green: #00ff9d;
+--color-buy: #00c853;
+  --color-sell: #e6450b;
   /* Status Colors */
   --color-success: #00c853;
   --color-danger: #ef4444;
@@ -60,12 +60,19 @@
   --color-text: #0f172a;
   --color-text-muted: #64748b;
 
-  /* Dark Theme */
+  /* Dark Theme#0b1d3a */
   --color-dark-background: #020617;
   --color-dark-surface: #0f172a;
   --color-dark-border: #1e293b;
   --color-dark-text: #f8fafc;
   --color-dark-text-muted: #94a3b8;
+  --color-dark-card: #0b1d3a;
+
+    --color-neon-cyan: #00ffff;
+  --color-neon-blue: #4169ff;
+  --color-neon-green: #00ff9d;
+  --color-text-green-light: #05c57b;
+  --color-text-green-dark: #00e6b8;
 }
 
 /* Base and utilities */
@@ -96,4 +103,24 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+@layer components {
+  .container-custom {
+    width: 100%;
+    max-width: 90rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-custom {
+      padding-inline: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-custom {
+      padding-inline: 3rem;
+    }
+  }
 }

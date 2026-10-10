@@ -2,13 +2,10 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useTheme } from 'next-themes';
+import { useTheme } from "@teispace/next-themes";
 import { useState } from 'react';
 import { FiSun, FiMoon, FiUser, FiSearch, FiMenu, FiX } from 'react-icons/fi';
 
-/* =========================================================
-   NAVIGATION LINKS
-   ========================================================= */
 const LINKS = [
   { href: '/', label: 'Dashboard' },
   { href: '/portfolio', label: 'Portfolio' },
@@ -16,9 +13,6 @@ const LINKS = [
   { href: '/alerts', label: 'Alerts' },
 ];
 
-/* =========================================================
-   NAVBAR COMPONENT
-   ========================================================= */
 export default function Navbar() {
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
@@ -35,7 +29,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur-xl dark:border-dark-border dark:bg-dark-background/95">
-      <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-10">
+      <div className="container-custom mx-auto flex h-16 items-center justify-between gap-4 ">
         
         {/* Brand Logo */}
         <Link href="/" className="group shrink-0">
