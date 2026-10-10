@@ -1,9 +1,16 @@
-import Image from "next/image";
 
-export default function Home() {
+import HomeHero from "../components/HomeHero";
+import MarketStats from "../components/MarketStats";
+import PopularStocks from "../components/PopularStocks";
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-
-    </div>
+    <main className="min-h-screen bg-slate-50 text-slate-900 dark:bg-[#061329] dark:text-white">
+      <div className="mx-auto max-w-7xl px-6 py-10">
+        <HomeHero />
+        <MarketStats />
+        <PopularStocks />
+      </div>
+    </main>
   );
 }
